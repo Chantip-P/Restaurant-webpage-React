@@ -1,22 +1,22 @@
 {
     "thai": [
       {
-        "imageSrc": "public/placeholder.jpg",
-        "nameTh": "อาหารไทย",
-        "nameEn": "Thai Food",
+        "imageSrc": "public/grilled-chicken.jpg",
+        "nameTh": "ไก่ย่าง",
+        "nameEn": "Grilled Chicken",
         "price": "150"
       },
       {
-        "imageSrc": "public/placeholder.jpg",
+        "imageSrc": "public/somtam.jpg",
         "nameTh": "ส้มตำ",
         "nameEn": "Somtam",
-        "price": "150"
+        "price": "79"
       }
 
     ],
     "sushi": [
       {
-        "imageSrc": "public/placeholder.jpg",
+        "imageSrc": "public/sushi.jpg",
         "nameTh": "ซูชิ",
         "nameEn": "Sushi",
         "price": "200"
@@ -25,22 +25,22 @@
     ],
     "desserts": [
       {
-        "imageSrc": "public/placeholder.jpg",
-        "nameTh": "ขนมหวาน",
-        "nameEn": "Dessert",
-        "price": "100"
+        "imageSrc": "public/cheese-cake.jpg",
+        "nameTh": "ชีสเค้ก",
+        "nameEn": "Cheese cake",
+        "price": "120"
       },
       {
-        "imageSrc": "public/placeholder.jpg",
-        "nameTh": "ขนมหวาน",
-        "nameEn": "Dessert",
-        "price": "100"
+        "imageSrc": "public/crepe.jpg",
+        "nameTh": "เครป",
+        "nameEn": "Crepe",
+        "price": "160"
       },
       {
-        "imageSrc": "public/placeholder.jpg",
-        "nameTh": "ขนมหวาน",
-        "nameEn": "Dessert",
-        "price": "100"
+        "imageSrc": "public/parfait.jpg",
+        "nameTh": "พาร์เฟ่ต์",
+        "nameEn": "Parfait",
+        "price": "150"
       }
     ]
   }

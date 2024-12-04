@@ -32,7 +32,7 @@ const TabbedMenu = () => {
             onClick={() => handleTabClick(category)}
             style={{
               padding: '10px 20px',
-              borderBottom: activeTab === category ? '2px solid #000' : 'none',
+              borderBottom: activeTab === category ? '2px solid red' : 'none',
               marginRight: '10px',
             }}
           >

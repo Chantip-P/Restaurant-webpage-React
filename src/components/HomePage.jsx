@@ -1,23 +1,36 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Nav from "./Nav";
 import FoodCard from "./FoodCard";
+import foodCategoriesData from '../data/food.json'
 
-function Homepage() {
+const Homepage = () => {
+  const [desserts, setDesserts] = useState(foodCategoriesData.desserts);
   return (
     <>
       <Nav />
-      <div style={{ display: "flex", height: "50vh", width: "100vw" }}>
-        <div style={{ flex: 1, overflow: "hidden" }}>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          height: "50vh",
+          width: "100vw",
+          overflowY: "auto",
+        }}
+      >
+        <div style={{ overflow: "hidden", height: "100vh", width: "100vw" }}>
           <img
-            src="public/placeholder.jpg"
+            src="/cover.jpg"
+            alt="Cover"
             style={{
               width: "100%",
               height: "100%",
               objectFit: "cover",
             }}
-          ></img>
+          />
         </div>
       </div>
+
       <div
         style={{
           margin: 50,
@@ -28,8 +41,45 @@ function Homepage() {
           alignItems: "center",
         }}
       >
-        <h1>Lorem Ipsum Restuarant</h1>
-        <p>Authentic Japanese Restaurant</p>
+        <h1
+          style={{
+            margin: "10px",
+            flexDirection: "column",
+            flex: 1,
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            textAlign: "center",
+            maxWidth: "800px",
+            fontSize: "38px",
+            lineHeight: "1.5",
+            color: "#333",
+          }}
+        >
+          Welcome to the Official Website of{" "}
+          <span style={{ color: "red", fontWeight: "bold" }}>
+            Fluffy McWhiskers, Supreme Cat Overlord!
+          </span>
+          Meow-lo there, humans! 🐾
+        </h1>
+
+        <p
+          style={{
+            margin: 10,
+            flexDirection: "column",
+            flex: 1,
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            textAlign: "center",
+            maxWidth: "800px",
+          }}
+        >
+          You’ve just stumbled upon the most important, most purr-fect place on
+          the internet – my kingdom. I'm Fluffy McWhiskers, the one and only cat
+          who rules this entire domain. I may be napping right now, but that
+          doesn’t mean you shouldn’t scroll around and bask in my glory.
+        </p>
         <div
           style={{
             width: "100%",
@@ -40,7 +90,7 @@ function Homepage() {
           }}
         >
           <img
-            src="public/placeholder.jpg"
+            src="public/cat.jpg"
             alt="Logo"
             style={{
               width: "100%",
@@ -50,14 +100,16 @@ function Homepage() {
           />
         </div>
       </div>
+
       <div
         style={{
           flex: 1,
           height: "1px",
-          backgroundColor: "#ccc", // Color of the lines
-          marginRight: "10px", // Space between line and text
+          backgroundColor: "#ccc",
+          marginRight: "10px",
         }}
       />
+
       <div
         style={{
           flexDirection: "column",
@@ -79,33 +131,18 @@ function Homepage() {
           justifyContent: "center",
         }}
       >
-        <FoodCard
-          imageSrc="public/placeholder.jpg"
-          nameTh="อาหารไทย"
-          nameEn="Thai Food"
-          price="150"
-        />
-        <FoodCard
-          imageSrc="public/placeholder.jpg"
-          nameTh="อาหารไทย"
-          nameEn="Thai Food"
-          price="150"
-        />
-        <FoodCard
-          imageSrc="public/placeholder.jpg"
-          nameTh="อาหารไทย"
-          nameEn="Thai Food"
-          price="150"
-        />
-        <FoodCard
-          imageSrc="public/placeholder.jpg"
-          nameTh="อาหารไทย"
-          nameEn="Thai Food"
-          price="150"
-        />
+        {desserts.map((food, index) => (
+          <FoodCard
+            key={index}
+            imageSrc={food.imageSrc}
+            nameTh={food.nameTh}
+            nameEn={food.nameEn}
+            price={food.price}
+          />
+        ))}
       </div>
     </>
   );
-}
+};
 
 export default Homepage;

@@ -4,7 +4,7 @@ import App from './App.jsx'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import './index.css'
 import Homepage from './components/Homepage.jsx'
-import Aboutpage from './components/Aboutpage.jsx'
+import Aboutpage from './components/AboutPage.jsx'
 import TabbedMenu from './components/TabbedMenu.jsx'
 
 const router = createBrowserRouter([
