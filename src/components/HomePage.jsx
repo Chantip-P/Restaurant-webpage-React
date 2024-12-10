@@ -20,7 +20,7 @@ const Homepage = () => {
       >
         <div style={{ overflow: "hidden", height: "100vh", width: "100vw" }}>
           <img
-            src="/cover.jpg"
+            src="public/cover.jpg"
             alt="Cover"
             style={{
               width: "100%",
